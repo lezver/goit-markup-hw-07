@@ -16,27 +16,62 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!--  header  -->
     <header class="header">
       <div class="container header-flex">
-        <a href="./index.html" class="logo link"><span>Web</span>Studio</a>
+        <a class="header-logo" href="./index.html">Web<span>Studio</span></a>
         <nav class="nav">
-          <ul class="nav-items list-style">
+          <button class="nav-btn" data-menu-open>
+            <svg>
+              <use href="./images/icons.svg#icon-hamburger"></use>
+            </svg>
+          </button>
+          <div class="hamburger-menu is-open" data-menu>
+            <button class="hamburger-btn" data-menu-close>
+              <svg>
+                <use href="./images/icons.svg#icon-modal-close-btn"></use>
+              </svg>
+            </button>
+            <ul class="hamburger-menu-list">
+              <li>
+                <ul class="hamburger-">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </li>
+              <li>
+                <ul class="hamburger-contacts">
+                  <li></li>
+                  <li></li>
+                </ul>
+              </li>
+              <li>
+                <ul class="hamburger-">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="nav-items">
             <li class="nav-item">
-              <a class="nav-link link active" href="./index.html">Studio</a>
+              <a class="nav-link active" href="./index.html">Studio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link" href="./portfolio.html">Portfolio</a>
+              <a class="nav-link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link" href="#">Contacts</a>
+              <a class="nav-link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
-        <ul class="contacts-items list-style">
+        <ul class="contacts-items">
           <li class="contacts-item">
             <a
               class="contacts-link link mail"
@@ -63,7 +98,7 @@
     </header>
     <main>
       <!--  Hero  -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container">
           <h1 class="hero-titel">
             Effective Solutions<br />
@@ -73,9 +108,9 @@
             Order Service
           </button>
         </div>
-      </section>
+      </section> -->
       <!--  Why we?  -->
-      <section class="why-we">
+      <!-- <section class="why-we">
         <div class="container">
           <h2 class="why-we-titel visually-hidden">Why we?</h2>
           <ul class="why-we-items list-style">
@@ -129,9 +164,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!--  What are we doing  -->
-      <section class="what-are-we-doing">
+      <!-- <section class="what-are-we-doing">
         <div class="container">
           <h2 class="what-are-we-doing-titel">What are we doing</h2>
           <ul class="what-are-we-doing-items list-style">
@@ -164,9 +199,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!--  Our team  -->
-      <section class="our-team">
+      <!-- <section class="our-team">
         <div class="container">
           <h2 class="our-team-titel">Our Team</h2>
           <ul class="our-team-items list-style">
@@ -424,9 +459,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!--  Customers  -->
-      <section class="customers">
+      <!-- <section class="customers">
         <div class="container">
           <h2 class="customers-titel">Customers</h2>
           <ul class="customers-items list-style">
@@ -508,10 +543,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!--  footer  -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-flex">
         <div class="footer-text">
           <a href="./index.html" class="logo footer-logo link"
@@ -663,7 +698,7 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
-    <script src="./js/manu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>-->
   </body>
 </html>
