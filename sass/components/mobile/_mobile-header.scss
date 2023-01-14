@@ -1,7 +1,6 @@
 .header {
   background-color: $white-color;
   border-bottom: 1px solid $cornflower;
-  position: relative;
 }
 .header-flex {
   display: flex;
@@ -46,17 +45,26 @@
   display: none;
 }
 .hamburger-menu {
-  background-color: rgba(0, 0, 0, 0.425);
+  background-color: $white-color;
+  background: violet;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  transform: translateY(0%);
+  transition: transform $time $time-distribution,
+    opacity $time $time-distribution, visibility $time $time-distribution;
+  opacity: 1;
+  visibility: visible;
 }
-.hamburger-menu .is-open {
+.is-open {
+  height: 0%;
+  width: 0%;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transform: translateY(-100%);
 }
 .hamburger-btn {
   position: absolute;
@@ -64,18 +72,21 @@
   right: 0;
   margin-top: 24px;
   margin-right: 24px;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--cornflower);
+  background-color: $cornflower;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: background 250ms var(--time-distribution),
-    border 250ms var(--time-distribution);
+  transition: background 250ms $time-distribution,
+    border 250ms $time-distribution;
   svg {
     width: 8px;
     height: 8px;
   }
+}
+.hamburger-menu-list {
+  @extend %list-style;
 }
