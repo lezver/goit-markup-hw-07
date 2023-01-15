@@ -29,32 +29,93 @@
               <use href="./images/icons.svg#icon-hamburger"></use>
             </svg>
           </button>
-          <div class="hamburger-menu is-open" data-menu>
+          <div class="hamburger-menu" data-menu>
             <button class="hamburger-btn" type="button" data-menu-close>
               <svg>
                 <use href="./images/icons.svg#icon-modal-close-btn"></use>
               </svg>
             </button>
-            <ul class="hamburger-menu-list">
+            <ul class="hamburger-items">
               <li>
-                <ul class="hamburger-">
-                  <li><a href="./index.html"></a>Studio</li>
-                  <li><a href="./portfolio.html">Portfolio</a></li>
-                  <li><a href="">Contacts</a></li>
+                <ul class="hamburger-nav">
+                  <li>
+                    <a class="hamburger-nav-link" href="./index.html">Studio</a>
+                  </li>
+                  <li>
+                    <a class="hamburger-nav-link" href="./portfolio.html"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hamburger-nav-link" href="">Contacts</a>
+                  </li>
                 </ul>
               </li>
-              <li>
+              <li class="hamburger-item-second">
                 <ul class="hamburger-contacts">
-                  <li></li>
-                  <li></li>
+                  <li>
+                    <a class="hamburger-contacts-tel" href="tel:+110001111111"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="hamburger-contacts-mail"
+                      href="mailto:info@devstudio.com"
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                      >info@devstudio.com</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li>
-                <ul class="hamburger-">
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                <ul class="hamburger-socials">
+                  <li>
+                    <a
+                      class="hamburger-social-link"
+                      href=""
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                    >
+                      <svg height="24" width="24">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="hamburger-social-link"
+                      href=""
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                    >
+                      <svg height="24" width="24">
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="hamburger-social-link"
+                      href=""
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                    >
+                      <svg height="24" width="24">
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="hamburger-social-link"
+                      href=""
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                    >
+                      <svg height="24" width="24">
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -74,7 +135,7 @@
         <ul class="contacts-items">
           <li class="contacts-item">
             <a
-              class="contacts-link link mail"
+              class="contacts-link"
               href="mailto:info@devstudio.com"
               target="_blank"
               rel=" noopener , nofollow , noreferrer"
@@ -86,7 +147,7 @@
             </a>
           </li>
           <li class="contacts-item">
-            <a class="contacts-link link" href="tel:+110001111111">
+            <a class="contacts-link" href="tel:+110001111111">
               <svg width="19" height="19">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
@@ -98,7 +159,7 @@
     </header>
     <main>
       <!--  Hero  -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-titel">
             Effective Solutions<br />
@@ -108,7 +169,7 @@
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
       <!--  Why we?  -->
       <!-- <section class="why-we">
         <div class="container">
@@ -697,7 +758,7 @@
           <button class="modal-form-btn basic-btn">send</button>
         </form>
       </div>
-    </div>-->
+    </div> -->
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>

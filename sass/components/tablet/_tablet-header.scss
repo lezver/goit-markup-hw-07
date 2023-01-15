@@ -1,0 +1,24 @@
+.nav-btn {
+  @include breakpoint(tab) {
+    display: none;
+  }
+}
+.hamburger-menu {
+  @include breakpoint(tab) {
+    display: none;
+  }
+}
+.nav-items {
+  @extend %list-style;
+  display: none;
+  @include breakpoint(tab) {
+    display: contents;
+  }
+}
+.contacts-items {
+  @extend %list-style;
+  display: none;
+  @include breakpoint(tab) {
+    display: block;
+  }
+}

@@ -46,25 +46,25 @@
 }
 .hamburger-menu {
   background-color: $white-color;
-  background: violet;
+  background: $white-color;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  transform: translateY(0%);
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-100%);
   transition: transform $time $time-distribution,
     opacity $time $time-distribution, visibility $time $time-distribution;
-  opacity: 1;
-  visibility: visible;
+  padding: 80px 40px 40px;
 }
-.is-open {
-  height: 0%;
-  width: 0%;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transform: translateY(-100%);
+.hamburger-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateY(0%);
 }
 .hamburger-btn {
   position: absolute;
@@ -87,6 +87,101 @@
     height: 8px;
   }
 }
-.hamburger-menu-list {
+.hamburger-items {
   @extend %list-style;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  ul {
+    @extend %list-style;
+  }
+  a {
+    @extend %link;
+  }
+}
+.hamburger-nav {
+  li {
+    margin-bottom: 5%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include breakpoint(mob) {
+      margin-bottom: 40px;
+    }
+  }
+}
+.hamburger-nav-link {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 25px;
+  color: $navy-blue;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  transition: color $time $time-distribution;
+  &:hover,
+  &:focus {
+    color: $iris;
+  }
+  @include breakpoint(mob) {
+    font-size: 36px;
+  }
+}
+.hamburger-item-second {
+  margin-top: auto;
+  margin-bottom: 15%;
+  @include breakpoint(mob) {
+    margin-bottom: 48px;
+  }
+}
+.hamburger-contacts {
+  li {
+    margin-bottom: 5%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include breakpoint(mob) {
+      margin-bottom: 40px;
+    }
+  }
+}
+.hamburger-contacts-tel {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.11;
+  color: $iris;
+  white-space: nowrap;
+  @include breakpoint(mob) {
+    font-size: 36px;
+  }
+}
+.hamburger-contacts-mail {
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: $slate;
+  @include breakpoint(mob) {
+    font-size: 20px;
+  }
+}
+.hamburger-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include breakpoint(mob) {
+    justify-content: space-evenly;
+  }
+}
+.hamburger-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: $iris;
+  svg {
+    height: 24px;
+    width: 24px;
+  }
 }
