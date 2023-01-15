@@ -62,13 +62,14 @@
   transition: transform $time $time-distribution,
     opacity $time $time-distribution, visibility $time $time-distribution;
   padding: 80px 40px 40px;
-}
-.hamburger-menu.is-open {
+  &.is-open {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
   transform: translateY(0%);
 }
+}
+
 .hamburger-btn {
   position: absolute;
   top: 0;

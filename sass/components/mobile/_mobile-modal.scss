@@ -7,31 +7,41 @@
   right: 0;
   background-color: $grey;
   z-index: 10;
-  transition: opacity $time $time-distribution,
-    visibility $time $time-distribution;
-}
-.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  
+  transition: opacity $time $time-distribution,
+    visibility $time $time-distribution;
+  &.is-hidden {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    > .modal {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 }
 .modal {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 290px;
-  height: 440px;
+  width: 310px;
+  height: 470px;
   padding: 55px 20px 20px;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1.5);
   background-color: $modal-background;
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 3px 0px #0000001f,
     0px 1px 1px 0px #00000024;
   transition: transform $time $time-distribution;
+  @include breakpoint (mob) {
+    width: 392px;
+    height: 586px;
+    padding: 72px 16px 24px;
+  }
 }
-.backdrop.is-hidden > .modal {
-  transform: translate(-50%, -50%) scale(1.5);
-}
+
 .modal-close-btn {
   position: absolute;
   top: 0;
@@ -63,19 +73,28 @@
   }
 }
 .modal-form-fieldset {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   border: none;
+  @include breakpoint (mob) {
+    margin-bottom: 16px;
+  }
 }
 .modal-form-legend {
   color: $navy-blue;
   font-weight: 500;
   text-align: center;
   margin-bottom: 10px;
+  @include breakpoint (mob) {
+    margin-bottom: 36px;
+  }
 }
 .modal-form-label {
   position: relative;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  @include breakpoint (mob) {
+    margin-bottom: 26px;
+  }
   &.mb-none {
     margin-bottom: 8px;
   }
@@ -99,26 +118,29 @@
   }
   & > span {
     position: absolute;
-    left: 16%;
+    left: 20%;
     top: 50%;
     font-size: 12px;
     letter-spacing: 0.01em;
     color: $light-slate;
     transform: translate(-50%, -50%);
     transition: transform $time $time-distribution;
+    @include breakpoint (mob) {
+    left: 17%;
+    }
   }
   & > input:focus {
     border: 1px solid $iris;
   }
   & > input:focus + span,
   & > input:not(:placeholder-shown) + span {
-    transform: translate(-165%, -220%);
+    transform: translate(-165%, -200%);
   }
   & > input:focus + .modal-form-label-phone {
-    transform: translate(-155%, -220%);
+    transform: translate(-155%, -200%);
   }
   & > input:focus + .modal-form-label-email {
-    transform: translate(-175%, -220%);
+    transform: translate(-175%, -200%);
   }
   & > input:focus ~ svg {
     fill: $iris;
@@ -143,6 +165,9 @@
     border-radius: 4px;
     outline: none;
     transition: border $time $time-distribution;
+    @include breakpoint (mob) {
+    height: 120px;
+    }
   }
   & > textarea::placeholder {
     color: #75757580;
@@ -154,15 +179,21 @@
 .modal-form-checkbox {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-size: 12px;
   letter-spacing: 0.04em;
+  @include breakpoint (mob) {
+    margin-bottom: 24px;
+    }
   & > input {
     @extend %visually-hidden;
   }
   & > span {
     display: flex;
+    align-items: center;
   }
   & > span::before {
     content: '';
@@ -178,12 +209,15 @@
   }
   & > svg {
     position: absolute;
-    left: 3px;
-    top: 4px;
+    left: 7px;
+    top: 5px;
     width: 10px;
     height: 8px;
     fill: $white-color;
     cursor: pointer;
+    @include breakpoint (mob) {
+      left: 11px;
+    }
   }
   & > input:checked + span::before,
   & > input:checked + svg {
@@ -192,6 +226,7 @@
     fill: $cloud;
   }
   & a {
+    display: inline;
     color: $iris;
     transition: color $time $time-distribution;
   }
