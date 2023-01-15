@@ -1,1 +1,148 @@
-
+/* ==================== FOOTER ==================== */
+.footer {
+  background: $navy-blue;
+  padding: 96px 0;
+  text-align: center;
+  ul{
+    @extend %list-style;
+  }
+}
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  @include breakpoint(mob) {
+    margin-bottom: 72px;
+  }
+  p {
+    color: $cornflower;
+    max-width: 264px;
+    text-align:start;
+  }
+}
+.footer-logo {
+  @extend link;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $iris;
+  margin-bottom: 16px;
+  span {
+    color: $cloud;
+  }
+}
+.footer-social-media {
+  margin-bottom: 50px;
+  @include breakpoint(mob) {
+    margin-bottom: 72px;
+  }
+}
+.footer-titel {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: $white-color;
+  margin-bottom: 16px;
+}
+.footer-items {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-link {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: background $time $time-distribution;
+  &:hover,
+  &:focus {
+  background: $green;
+}
+}
+.footer-form {
+  p {font-weight: 500;
+  color: $white-color;
+  margin-bottom: 16px;
+  }
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--all-gap);
+    border: none;
+  }
+}
+.footer-form-label {
+  position: relative;
+}
+.footer-form-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  @include breakpoint(mob) {
+    width: 264px;
+  }
+  input {
+    // display: block;
+    background: transparent;
+  border: 1px solid #ffffff4d;
+  outline: none;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #ffffff99;
+  }
+  span {
+    position: absolute;
+    top: 11px;
+    left: 17px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: #ffffff99;
+    transition: transform $time $time-distribution;
+  }
+  & > input:focus + span,
+  & > input:not(:placeholder-shown) + span {
+    transform: translate(0%, -160%);
+    color: $cloud;
+  }
+}
+.footer-form-btn {
+  @extend %basic-btn;
+  display: flex;
+  background-color:$iris;
+  padding: 8px 24px;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  transition: background $time $time-distribution;
+  &:hover,
+  &:focus {
+    background-color: $ocean;
+  }
+  & > span {
+  margin-right: 16px;
+  font-weight: 500;
+  color: $white-color;
+  }
+  & > svg {
+    width: 24px;
+    height: 24px;
+    fill: $white-color;
+  }
+}
