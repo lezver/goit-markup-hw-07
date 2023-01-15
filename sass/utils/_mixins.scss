@@ -17,3 +17,10 @@
     }
   }
 }
+@mixin min-device-pixel($factor, $dpi, $dppx) {
+  @media screen and (min-device-pixel-ratio: $factor),
+    screen and (min-resolution: $dpi),
+    screen and (min-resolution: $dppx) {
+    @content;
+  }
+}

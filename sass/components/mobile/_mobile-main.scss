@@ -1,0 +1,46 @@
+/* ==================== Hero ==================== */
+.hero {
+  min-height: 432px;
+  padding: 112px 0;
+  text-align: center;
+  background-color: $navy-blue;
+  background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url('../../../images/mobile/mobile-hero-bg.jpg') no-repeat center/cover;
+  @include min-device-pixel(2, 192dpi, 2dppx) {
+    & {
+      background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../../../images/mobile/mobile-hero-bg@2x.jpg') no-repeat
+          center/cover;
+    }
+  }
+  @include min-device-pixel(3, 288dpi, 3dppx) {
+    & {
+      background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../../../images/mobile/mobile-hero-bg@3x.jpg') no-repeat
+          center/cover;
+    }
+  }
+}
+.hero-titel {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.11;
+  margin-bottom: 72px;
+  color: $white-color;
+  @include breakpoint(mob) {
+    font-size: 36px;
+  }
+}
+.hero-btn {
+  @extend %basic-btn;
+  background-color: $iris;
+  color: $white-color;
+  padding: 16px 32px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  transition: background $time $time-distribution;
+}
+.hero-btn:focus,
+.hero-btn:hover {
+  background-color: $ocean;
+}
