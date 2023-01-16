@@ -16,32 +16,126 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!--  header  -->
     <header class="header">
       <div class="container header-flex">
-        <a href="./index.html" class="logo link"><span>Web</span>Studio</a>
+        <a class="header-logo" href="./index.html">Web<span>Studio</span></a>
         <nav class="nav">
-          <ul class="nav-items list-style">
+          <button class="nav-btn" type="button" data-menu-open>
+            <svg>
+              <use href="./images/icons.svg#icon-hamburger"></use>
+            </svg>
+          </button>
+          <div class="hamburger-menu" data-menu>
+            <button class="hamburger-btn" type="button" data-menu-close>
+              <svg>
+                <use href="./images/icons.svg#icon-modal-close-btn"></use>
+              </svg>
+            </button>
+            <ul class="hamburger-items">
+              <li>
+                <ul class="hamburger-nav">
+                  <li>
+                    <a class="hamburger-nav-link" href="./index.html">Studio</a>
+                  </li>
+                  <li>
+                    <a class="hamburger-nav-link" href="./portfolio.html"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hamburger-nav-link" href="">Contacts</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="hamburger-item-second">
+                <ul class="hamburger-contacts">
+                  <li>
+                    <a class="hamburger-contacts-tel" href="tel:+110001111111"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="hamburger-contacts-mail"
+                      href="mailto:info@devstudio.com"
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="hamburger-socials">
+                  <li>
+                    <a
+                      class="hamburger-social-link"
+                      href=""
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                    >
+                      <svg height="24" width="24">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="hamburger-social-link"
+                      href=""
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                    >
+                      <svg height="24" width="24">
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="hamburger-social-link"
+                      href=""
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                    >
+                      <svg height="24" width="24">
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="hamburger-social-link"
+                      href=""
+                      target="_blank"
+                      rel=" noopener , nofollow , noreferrer"
+                    >
+                      <svg height="24" width="24">
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="nav-items">
             <li class="nav-item">
-              <a class="nav-link link" href="./index.html">Studio</a>
+              <a class="nav-link active" href="./index.html">Studio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link active" href="./portfolio.html"
-                >Portfolio</a
-              >
+              <a class="nav-link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link" href="#">Contacts</a>
+              <a class="nav-link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
-        <ul class="contacts-items list-style">
+        <ul class="contacts-items">
           <li class="contacts-item">
             <a
-              class="contacts-link link mail"
+              class="contacts-link"
               href="mailto:info@devstudio.com"
               target="_blank"
               rel=" noopener , nofollow , noreferrer"
@@ -53,7 +147,7 @@
             </a>
           </li>
           <li class="contacts-item">
-            <a class="contacts-link link" href="tel:+110001111111">
+            <a class="contacts-link" href="tel:+110001111111">
               <svg width="19" height="19">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
@@ -67,39 +161,39 @@
       <!--  portfolio  -->
       <section class="portfolio">
         <div class="container">
-          <h1 class="portfolio-titel visually-hidden">Portfolio</h1>
-          <ul class="portfolio-filter-items list-style">
+          <h1 class="portfolio-titel">Portfolio</h1>
+          <!--  portfolio filter items  -->
+          <ul class="portfolio-filter-items">
             <li class="portfolio-filter-item">
-              <button class="portfolio-btn basic-btn" type="button">All</button>
+              <button class="portfolio-btn active-btn" type="button">All</button>
             </li>
             <li class="portfolio-filter-item">
-              <button class="portfolio-btn basic-btn" type="button">
+              <button class="portfolio-btn" type="button">
                 Web Site
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button class="portfolio-btn basic-btn" type="button">App</button>
+              <button class="portfolio-btn" type="button">App</button>
             </li>
             <li class="portfolio-filter-item">
-              <button class="portfolio-btn basic-btn" type="button">
+              <button class="portfolio-btn" type="button">
                 Design
               </button>
             </li>
             <li class="portfolio-filter-item">
-              <button class="portfolio-btn basic-btn" type="button">
+              <button class="portfolio-btn" type="button">
                 Marketing
               </button>
             </li>
           </ul>
-          <ul class="portfolio-items list-style">
+          <!--  portfolio items -->
+          <ul class="portfolio-items">
             <li class="portfolio-item">
               <div class="portfolio-img-wrapper">
                 <img
                   class="portfolio-img"
                   src="./images/portfolio-1.jpg"
                   alt="interface"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -118,8 +212,6 @@
                   class="portfolio-img"
                   src="./images/portfolio-2.jpg"
                   alt="cashless"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -138,8 +230,6 @@
                   class="portfolio-img"
                   src="./images/portfolio-3.jpg"
                   alt="mediataion app"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -158,8 +248,6 @@
                   class="portfolio-img"
                   src="./images/portfolio-4.jpg"
                   alt="taxi service"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -178,8 +266,6 @@
                   class="portfolio-img"
                   src="./images/portfolio-5.jpg"
                   alt="screen illustration"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -198,8 +284,6 @@
                   class="portfolio-img"
                   src="./images/portfolio-6.jpg"
                   alt="online courses"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -218,8 +302,6 @@
                   class="portfolio-img"
                   src="./images/portfolio-7.jpg"
                   alt="stories concept"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -238,8 +320,6 @@
                   class="portfolio-img"
                   src="./images/portfolio-8.jpg"
                   alt="organic food"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -258,8 +338,6 @@
                   class="portfolio-img"
                   src="./images/portfolio-9.jpg"
                   alt="fresh coffee"
-                  width="360"
-                  height="300"
                 />
                 <p class="portfolio-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -280,61 +358,63 @@
     <footer class="footer">
       <div class="container footer-flex">
         <div class="footer-text">
-          <a href="./index.html" class="logo footer-logo link"
-            ><span>Web</span>Studio</a
+          <a href="./index.html" class="footer-logo"
+            >
+            Web<span>Studio</span>
+            </a
           >
-          <p class="footer-info">
+          <p>
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
           </p>
         </div>
         <div class="footer-social-media">
           <p class="footer-titel">Social media</p>
-          <ul class="footer-items list-style">
+          <ul class="footer-items">
             <li class="footer-item">
               <a
-                href=""
                 class="footer-link"
+                href=""
                 target="_blank"
                 rel=" noopener , nofollow , noreferrer"
               >
-                <svg height="24" width="24">
+                <svg>
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-item">
               <a
-                href=""
                 class="footer-link"
+                href=""
                 target="_blank"
                 rel=" noopener , nofollow , noreferrer"
               >
-                <svg height="24" width="24">
+                <svg>
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-item">
               <a
-                href=""
                 class="footer-link"
+                href=""
                 target="_blank"
                 rel=" noopener , nofollow , noreferrer"
               >
-                <svg height="24" width="24">
+                <svg>
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-item">
               <a
-                href=""
                 class="footer-link"
+                href=""
                 target="_blank"
                 rel=" noopener , nofollow , noreferrer"
               >
-                <svg height="24" width="24">
+                <svg>
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -358,6 +438,6 @@
         </form>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

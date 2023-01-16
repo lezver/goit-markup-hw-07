@@ -1,0 +1,88 @@
+/* ==================== Portfolio ==================== */
+.portfolio {
+  padding: 48px 0;
+}
+.portfolio-titel {
+  @extend %visually-hidden;
+}
+/* ==================== Portfolio filter items ==================== */
+.portfolio-filter-items {
+  @extend %list-style;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: $all-gap;
+  row-gap: 16px;
+  width: 264px;
+  margin: 0 auto 48px;
+}
+.portfolio-btn {
+  @extend %basic-btn;
+  background: $cornflower;
+  color: $iris;
+  text-align: center;
+  padding: 8px 16px;
+  transition: background $time $time-distribution,
+    color $time $time-distribution;
+  &.active-btn {
+    background: $ocean;
+    color: $white-color;
+  }
+  &:hover,
+  &:focus {
+    background: $ocean;
+    color: $white-color;
+  }
+}
+/* ==================== Portfolio items ==================== */
+.portfolio-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: $all-gap;
+}
+.portfolio-item {
+  max-width: 360px;
+  box-shadow: 0px 1px 6px 0px #2e2f4214;
+  transition: box-shadow $time $time-distribution;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 2px 1px 0px #2e2f4214, 0px 1px 1px 0px #2e2f4229,
+    0px 1px 6px 0px #2e2f4214;
+    cursor: pointer;
+  }
+}
+.portfolio-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $iris;
+  color: $cloud;
+  padding: 42px 32px 0;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform $time $time-distribution;
+}
+.portfolio-item:hover .portfolio-overlay,
+.portfolio-item:focus .portfolio-overlay {
+  transform: translateY(0);
+}
+.portfolio-box {
+  padding: 32px 16px;
+  border: 1px solid var(--cornflower);
+  border-top: none;
+}
+.partfolio-name {
+  color: var(--navy-blue);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
