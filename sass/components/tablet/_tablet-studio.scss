@@ -30,7 +30,8 @@
 .why-we-items{
   @include breakpoint (tab) {
     grid-template-columns: 351px 351px;
-    column-gap: 46px;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 }
 /* ==================== What are we doing ==================== */
@@ -38,7 +39,7 @@
 .our-team-items {
   @include breakpoint (tab){
     grid-template-columns: 264px 264px;
-    column-gap: $row-gap;
+    column-gap: 24px;
     row-gap: 64px;
   }
 }
@@ -46,6 +47,6 @@
 .customers-items {
   @include breakpoint (tab) {
     grid-template-columns: 168px 168px 168px;
-    column-gap: $row-gap;
+    column-gap: 24px;
   }
 }

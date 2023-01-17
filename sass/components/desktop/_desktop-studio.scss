@@ -26,12 +26,70 @@
   }
 }
 /* ==================== Why we? ==================== */
-.why-we-items{
+.why-we {
+  @include breakpoint (des) {
+    padding: 120px 0;
+  }
+}
+.why-we-items {
   @include breakpoint (des) {
     grid-template-columns: 264px 264px 264px 264px;
     column-gap: 24px;
   }
 }
+.why-we-item {
+  @include breakpoint (des) {
+    h3 {
+      color: $navy-blue;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    p {
+      font-weight: 400;
+    }
+    & svg {
+      transform: scale(1);
+      transition: transform $time $time-distribution;
+    }
+    &:hover svg {
+    transform: scale(1.5);
+    }
+  }
+  
+}
+.why-we-img {
+  @include breakpoint (des) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    width: 100%;
+    background-color: $cloud;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    svg{
+      height: 64px;
+      width: 64px;
+    }
+  }
+}
 /* ==================== What are we doing ==================== */
+.what-are-we-doing {
+  @include breakpoint (des) {
+    display: block;
+    text-align: center;
+    padding-bottom: 120px;
+  }
+}
+.what-are-we-doing-titel {
+  @include breakpoint (des) {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    color: $navy-blue;
+    margin-bottom: 72px;
+  }
+}
 /* ==================== Our Team ==================== */
 /* ==================== Customers ==================== */

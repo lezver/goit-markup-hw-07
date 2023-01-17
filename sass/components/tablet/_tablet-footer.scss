@@ -6,12 +6,11 @@
 }
 .footer-flex {
   @include breakpoint(tab) {
-  display: flex;
+  display: grid;
+  grid-template-columns: 264px 208px;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: $row-gap;
-  column-gap: $column-gap;
+  row-gap: 72px;
+  column-gap: 24px;
   }
 }
 .footer-text {
@@ -21,10 +20,9 @@
 }
 .footer-form {
   @include breakpoint(tab){
-    margin-right: 93px;
     fieldset {
       flex-direction:row;
-      gap: $row-gap;
+      gap: 24px;
     }
   }
 }

@@ -7,14 +7,18 @@
     @extend %list-style;
   }
 }
+.footer-flex {
+  display: grid;
+  gap: 50px;
+  @include breakpoint(mob) {
+    gap: 72px;
+  }
+
+}
 .footer-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
-  @include breakpoint(mob) {
-    margin-bottom: 72px;
-  }
   p {
     color: $cornflower;
     max-width: 264px;
@@ -33,12 +37,6 @@
   margin-bottom: 16px;
   span {
     color: $cloud;
-  }
-}
-.footer-social-media {
-  margin-bottom: 50px;
-  @include breakpoint(mob) {
-    margin-bottom: 72px;
   }
 }
 .footer-titel {
