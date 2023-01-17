@@ -1,0 +1,21 @@
+/* ==================== Portfolio ==================== */
+.portfolio {
+  @include breakpoint (tab) {
+    padding: 64px 0;
+  }
+}
+/* ==================== Portfolio filter items ==================== */
+.portfolio-filter-items {
+  @include breakpoint (tab) {
+    width: auto;
+    margin: 0 auto 64px;
+  }
+}
+/* ==================== Portfolio items ==================== */
+.portfolio-items {
+  @include breakpoint (tab) {
+    grid-template-columns: 360px 360px;
+    row-gap: $column-gap;
+    column-gap: $row-gap;
+  }
+}

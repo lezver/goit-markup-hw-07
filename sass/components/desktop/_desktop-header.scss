@@ -1,0 +1,27 @@
+/* ==================== HEADER ==================== */
+.header-logo {
+  @include breakpoint (des) {
+    line-height: 1.33;
+    margin-right: 76px;
+  }
+}
+.nav {
+  @include breakpoint (des) {
+    margin-right: auto;
+  }
+}
+.contacts-items {
+  @include breakpoint (des) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+.contacts-link {
+  @include breakpoint (des) {
+    font-size: 16px;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

@@ -7,10 +7,6 @@
     @extend %list-style;
   }
 }
-.footer-flex {
-  display: flex;
-  flex-direction: column;
-}
 .footer-text {
   display: flex;
   flex-direction: column;
@@ -85,19 +81,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--all-gap);
     border: none;
   }
 }
 .footer-form-label {
   position: relative;
-}
-.footer-form-label {
   display: block;
   width: 100%;
   margin-bottom: 16px;
   @include breakpoint(mob) {
-    width: 264px;
+    width: 396px;
   }
   input {
   background: transparent;

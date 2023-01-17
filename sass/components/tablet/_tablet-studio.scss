@@ -29,11 +29,23 @@
 /* ==================== Why we? ==================== */
 .why-we-items{
   @include breakpoint (tab) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 351px 351px;
     column-gap: 46px;
   }
 }
 /* ==================== What are we doing ==================== */
 /* ==================== Our Team ==================== */
+.our-team-items {
+  @include breakpoint (tab){
+    grid-template-columns: 264px 264px;
+    column-gap: $row-gap;
+    row-gap: 64px;
+  }
+}
 /* ==================== Customers ==================== */
+.customers-items {
+  @include breakpoint (tab) {
+    grid-template-columns: 168px 168px 168px;
+    column-gap: $row-gap;
+  }
+}

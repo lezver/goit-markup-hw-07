@@ -1,0 +1,36 @@
+/* ==================== FOOTER ==================== */
+.footer {
+  @include breakpoint (tab) {
+    text-align: start;
+  }
+}
+.footer-flex {
+  @include breakpoint(tab) {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+  }
+}
+.footer-text {
+  @include breakpoint (tab) {
+    align-items:flex-start;
+  }
+}
+.footer-form {
+  @include breakpoint(tab){
+    margin-right: 93px;
+    fieldset {
+      flex-direction:row;
+      gap: $row-gap;
+    }
+  }
+}
+.footer-form-label {
+  @include breakpoint(tab) {
+    width: 264px;
+    margin-bottom: 0;
+  }
+}
