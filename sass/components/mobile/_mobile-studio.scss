@@ -57,41 +57,40 @@
   grid-template-columns: 1fr;
   justify-content: center;
   row-gap: 60px;
-  @include breakpoint (mob) {
+  @include breakpoint(mob) {
     grid-template-columns: 396px;
     row-gap: 72px;
   }
-
 }
 .why-we-item {
   h3 {
-  color: $navy-blue;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 1.11;
-  margin-bottom: 8px;
-  text-align: center;
-  @include breakpoint (mob) {
-    font-size: 36px;
+    color: $navy-blue;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.11;
+    margin-bottom: 8px;
+    text-align: center;
+    @include breakpoint(mob) {
+      font-size: 36px;
     }
   }
-  p{
+  p {
     font-weight: 500;
   }
 }
-.why-we-img{
+.why-we-img {
   display: none;
 }
 /* ==================== What are we doing ==================== */
-.what-are-we-doing{
+.what-are-we-doing {
   display: none;
 }
 /* ==================== Our Team ==================== */
-.our-team{
+.our-team {
   background: $cloud;
   padding: 96px 0;
   text-align: center;
-  ul{
+  ul {
     @extend %list-style;
   }
 }
@@ -101,7 +100,7 @@
   line-height: 1.11;
   color: $navy-blue;
   margin-bottom: 60px;
-  @include breakpoint (mob) {
+  @include breakpoint(mob) {
     font-size: 36px;
     margin-bottom: 72px;
   }
@@ -111,7 +110,7 @@
   grid-template-columns: 264px;
   justify-content: center;
   row-gap: 60px;
-  @include breakpoint (mob) {
+  @include breakpoint(mob) {
     row-gap: 72px;
   }
 }
@@ -150,9 +149,9 @@
   transition: background $time $time-distribution;
   &:hover,
   &:focus {
-  background: $ocean;
-}
-  svg{
+    background: $ocean;
+  }
+  svg {
     width: 24px;
     height: 24px;
   }
@@ -172,7 +171,7 @@
   color: $navy-blue;
   text-align: center;
   margin-bottom: 60px;
-  @include breakpoint (mob) {
+  @include breakpoint(mob) {
     font-size: 36px;
     margin-bottom: 72px;
   }
@@ -183,7 +182,7 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 16px;
   row-gap: 50px;
-  @include breakpoint (mob) {
+  @include breakpoint(mob) {
     grid-template-columns: 190px 190px;
     row-gap: 72px;
   }
@@ -196,21 +195,21 @@
   border-radius: 5px;
   border: 1px solid $light-slate;
   transition: border $time $time-distribution;
-  @include breakpoint (mob) {
+  &:hover,
+  &:focus {
+    border: 1px solid $ocean;
+  }
+  svg {
+    fill: $light-slate;
+    transition: fill $time $time-distribution;
+  }
+  &:hover svg,
+  &:focus svg {
+    fill: $ocean;
+  }
+  @include breakpoint(mob) {
     width: 100%;
   }
-}
-.customers-link:hover,
-.customers-link:focus {
-  border: 1px solid $ocean;
-}
-.customers-link > svg {
-  fill: $light-slate;
-  transition: fill $time $time-distribution;
-  &:hover > svg,
-  &:focus > svg {
-  fill: $ocean;
-}
 }
 .customers-one {
   width: 41px;

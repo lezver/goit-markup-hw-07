@@ -180,7 +180,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   margin-bottom: 16px;
   font-size: 12px;
@@ -207,32 +207,33 @@
     transition: background $time $time-distribution,
       border $time $time-distribution;
   }
+  & > a {
+    display: inline-block;
+    margin: 0 auto;
+    color: $iris;
+    transition: color $time $time-distribution;
+    @include breakpoint(mob) {
+      margin-left: 0;
+    }
+  }
+  & > a:hover,
+  & > a:focus {
+    color: $ocean;
+  }
   & > svg {
     position: absolute;
-    left: 7px;
+    left: 3px;
     top: 5px;
     width: 10px;
     height: 8px;
     fill: $white-color;
     cursor: pointer;
-    @include breakpoint(mob) {
-      left: 11px;
-    }
   }
   & > input:checked + span::before,
   & > input:checked + svg {
     background-color: $ocean;
     border-color: $ocean;
     fill: $cloud;
-  }
-  & a {
-    display: inline;
-    color: $iris;
-    transition: color $time $time-distribution;
-  }
-  & a:hover,
-  & a:focus {
-    color: $ocean;
   }
 }
 .modal-form-btn {
