@@ -1,0 +1,21 @@
+/* ==================== Portfolio ==================== */
+.portfolio {
+  @include breakpoint(des) {
+    padding: 96px 0 120px;
+  }
+}
+/* ==================== Portfolio filter items ==================== */
+.portfolio-filter-items {
+  @include breakpoint(des) {
+    width: auto;
+    margin: 0 auto 64px;
+  }
+}
+/* ==================== Portfolio items ==================== */
+.portfolio-items {
+  @include breakpoint(des) {
+    grid-template-columns: 360px 360px 360px;
+    row-gap: 40px;
+    column-gap: 24px;
+  }
+}
