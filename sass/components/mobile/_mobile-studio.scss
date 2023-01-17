@@ -41,8 +41,8 @@
   transition: background $time $time-distribution;
   &:focus,
   &:hover {
-  background-color: $ocean;
-}
+    background-color: $ocean;
+  }
 }
 /* ==================== Why we? ==================== */
 .why-we {

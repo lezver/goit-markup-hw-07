@@ -1,3 +1,4 @@
+/* ==================== HEADER ==================== */
 .nav-btn {
   @include breakpoint(tab) {
     display: none;
@@ -12,13 +13,73 @@
   @extend %list-style;
   display: none;
   @include breakpoint(tab) {
-    display: contents;
+    display: flex;
+    gap: 40px;
+    
+  }
+}
+.nav-link {
+  @extend %link;
+  position: relative;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: $navy-blue;
+  padding: 24px 0;
+  display: block;
+  transition: color $time $time-distribution;
+  &.active {
+    color: $ocean;
+  }
+  &:focus,
+  &:hover {
+    color: $ocean;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: $ocean;
+    transform: scale(0);
+    transition: transform $time $time-distribution;
+  }
+  &.active::after,
+  &:focus::after,
+  &:hover::after {
+    transform: scale(1);
   }
 }
 .contacts-items {
   @extend %list-style;
   display: none;
   @include breakpoint(tab) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+.contacts-link {
+  @extend %link;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: $slate;
+  &:focus,
+  &:hover {
+  color: $iris;
+  }
+  svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    fill: $slate;
+    transition: fill $time $time-distribution;
+  }
+  &:focus > svg,
+  &:hover > svg {
+    fill: $iris;
   }
 }

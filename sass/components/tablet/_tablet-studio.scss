@@ -1,0 +1,39 @@
+/* ==================== Hero ==================== */
+.hero {
+  @include breakpoint (tab) {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url('../../../images/bg-tablet/tablet-hero-bg.jpg') no-repeat center/cover;
+    @include min-device-pixel(2, 192dpi, 2dppx) {
+      & {
+      background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../../../images/bg-tablet/tablet-hero-bg@2x.jpg') no-repeat
+          center/cover;
+      }
+    }
+    @include min-device-pixel(3, 288dpi, 3dppx) {
+      & {
+        background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../../../images/bg-tablet/tablet-hero-bg@3x.jpg') no-repeat
+          center/cover;
+      }
+    }
+  }
+}
+.hero-titel {
+  @include breakpoint (tab) {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 40px;
+  }
+}
+/* ==================== Why we? ==================== */
+.why-we-items{
+  @include breakpoint (tab) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 46px;
+  }
+}
+/* ==================== What are we doing ==================== */
+/* ==================== Our Team ==================== */
+/* ==================== Customers ==================== */
