@@ -1,34 +1,38 @@
 /* ==================== Hero ==================== */
 .hero {
-  @include breakpoint (tab) {
+  @include breakpoint(tab) {
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url('../../../images/bg-tablet/tablet-hero-bg.jpg') no-repeat center/cover;
+      url('./images/bg-tablet/tablet-hero-bg.jpg') no-repeat center/cover;
     @include min-device-pixel(2, 192dpi, 2dppx) {
       & {
-      background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url('../../../images/bg-tablet/tablet-hero-bg@2x.jpg') no-repeat
-          center/cover;
+        background: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+          ),
+          url('./images/bg-tablet/tablet-hero-bg@2x.jpg') no-repeat center/cover;
       }
     }
     @include min-device-pixel(3, 288dpi, 3dppx) {
       & {
-        background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url('../../../images/bg-tablet/tablet-hero-bg@3x.jpg') no-repeat
-          center/cover;
+        background: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+          ),
+          url('./images/bg-tablet/tablet-hero-bg@3x.jpg') no-repeat center/cover;
       }
     }
   }
 }
 .hero-titel {
-  @include breakpoint (tab) {
+  @include breakpoint(tab) {
     font-size: 56px;
     line-height: 1.07;
     margin-bottom: 40px;
   }
 }
 /* ==================== Why we? ==================== */
-.why-we-items{
-  @include breakpoint (tab) {
+.why-we-items {
+  @include breakpoint(tab) {
     grid-template-columns: 351px 351px;
     row-gap: 72px;
     column-gap: 24px;
@@ -37,7 +41,7 @@
 /* ==================== What are we doing ==================== */
 /* ==================== Our Team ==================== */
 .our-team-items {
-  @include breakpoint (tab){
+  @include breakpoint(tab) {
     grid-template-columns: 264px 264px;
     column-gap: 24px;
     row-gap: 64px;
@@ -45,7 +49,7 @@
 }
 /* ==================== Customers ==================== */
 .customers-items {
-  @include breakpoint (tab) {
+  @include breakpoint(tab) {
     grid-template-columns: 168px 168px 168px;
     column-gap: 24px;
   }

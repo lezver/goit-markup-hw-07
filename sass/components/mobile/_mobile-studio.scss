@@ -5,19 +5,17 @@
   text-align: center;
   background-color: $navy-blue;
   background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url('../../../images/bg-mobile/mobile-hero-bg.jpg') no-repeat center/cover;
+    url('./images/bg-mobile/mobile-hero-bg.jpg') no-repeat center/cover;
   @include min-device-pixel(2, 192dpi, 2dppx) {
     & {
       background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url('../../../images/bg-mobile/mobile-hero-bg@2x.jpg') no-repeat
-          center/cover;
+        url('./images/bg-mobile/mobile-hero-bg@2x.jpg') no-repeat center/cover;
     }
   }
   @include min-device-pixel(3, 288dpi, 3dppx) {
     & {
       background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url('../../../images/bg-mobile/mobile-hero-bg@3x.jpg') no-repeat
-          center/cover;
+        url('./images/bg-mobile/mobile-hero-bg@3x.jpg') no-repeat center/cover;
     }
   }
 }
