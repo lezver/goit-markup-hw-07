@@ -1,6 +1,7 @@
 /* ==================== Hero ==================== */
 .hero {
   @include breakpoint(des) {
+    margin: 0 auto;
     max-width: 1440px;
     padding: 188px 0;
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
