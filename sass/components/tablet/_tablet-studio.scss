@@ -2,14 +2,15 @@
 .hero {
   @include breakpoint(tab) {
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url('./images/bg-tablet/tablet-hero-bg.jpg') no-repeat center/cover;
+      url('../images/bg-tablet/tablet-hero-bg.jpg') no-repeat center/cover;
     @include min-device-pixel(2, 192dpi, 2dppx) {
       & {
         background: linear-gradient(
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
           ),
-          url('./images/bg-tablet/tablet-hero-bg@2x.jpg') no-repeat center/cover;
+          url('../images/bg-tablet/tablet-hero-bg@2x.jpg') no-repeat
+            center/cover;
       }
     }
     @include min-device-pixel(3, 288dpi, 3dppx) {
@@ -18,7 +19,8 @@
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
           ),
-          url('./images/bg-tablet/tablet-hero-bg@3x.jpg') no-repeat center/cover;
+          url('../images/bg-tablet/tablet-hero-bg@3x.jpg') no-repeat
+            center/cover;
       }
     }
   }

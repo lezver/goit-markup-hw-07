@@ -3,14 +3,14 @@
   @include breakpoint(des) {
     padding: 188px 0;
     background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url('./images/bg-desktop/desktop-hero-bg.jpg') no-repeat center/cover;
+      url('../images/bg-desktop/desktop-hero-bg.jpg') no-repeat center/cover;
     @include min-device-pixel(2, 192dpi, 2dppx) {
       & {
         background: linear-gradient(
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
           ),
-          url('./images/bg-desktop/desktop-hero-bg@2x.jpg') no-repeat
+          url('../images/bg-desktop/desktop-hero-bg@2x.jpg') no-repeat
             center/cover;
       }
     }
@@ -20,7 +20,7 @@
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
           ),
-          url('./images/bg-desktop/desktop-hero-bg@3x.jpg') no-repeat
+          url('../images/bg-desktop/desktop-hero-bg@3x.jpg') no-repeat
             center/cover;
       }
     }
