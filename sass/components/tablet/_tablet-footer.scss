@@ -1,27 +1,27 @@
 /* ==================== FOOTER ==================== */
 .footer {
-  @include breakpoint (tab) {
+  @include breakpoint(tab) {
     text-align: start;
   }
 }
 .footer-flex {
   @include breakpoint(tab) {
-  display: grid;
-  grid-template-columns: 264px 208px;
-  justify-content: center;
-  row-gap: 72px;
-  column-gap: 24px;
+    display: grid;
+    grid-template-columns: 264px 208px;
+    justify-content: center;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 }
 .footer-text {
-  @include breakpoint (tab) {
-    align-items:flex-start;
+  @include breakpoint(tab) {
+    align-items: flex-start;
   }
 }
 .footer-form {
-  @include breakpoint(tab){
+  @include breakpoint(tab) {
     fieldset {
-      flex-direction:row;
+      flex-direction: row;
       gap: 24px;
     }
   }
